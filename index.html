@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Userly — User Management</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css  ">
+</head>
+
+<body>
+
+  <!-- Background Glow -->
+  <div class="bg-glow glow-one"></div>
+  <div class="bg-glow glow-two"></div>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="logo">
+      <div class="logo-icon">U</div>
+
+      <div>
+        <h1>Userly</h1>
+        <span>User Management</span>
+      </div>
+    </div>
+
+    <div class="header-badge">
+      <span class="status-dot"></span>
+      Admin Panel
+    </div>
+
+  </header>
+
+
+  <main class="container">
+
+    <!-- PAGE INTRO -->
+    <section class="hero">
+
+      <div>
+        <p class="eyebrow">TEAM DIRECTORY</p>
+
+        <h2>
+          Manage your
+          <span>team members.</span>
+        </h2>
+
+        <p class="hero-text">
+          Add, organize and manage your team members
+          from one simple dashboard.
+        </p>
+      </div>
+
+      <div class="total-users">
+        <strong id="userCount">3</strong>
+        <span>Total Users</span>
+      </div>
+
+    </section>
+
+
+    <!-- ADD USER SECTION -->
+    <section class="add-section">
+
+      <div class="section-heading">
+        <div>
+          <h3>Add New User</h3>
+          <p>Create a new team member profile.</p>
+        </div>
+      </div>
+
+
+      <form id="userForm" class="user-form">
+
+        <div class="input-group">
+
+          <label for="name">Full Name</label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="e.g. John Doe"
+            required
+          />
+
+        </div>
+
+
+        <div class="input-group">
+
+          <label for="role">Role</label>
+
+          <input
+            type="text"
+            id="role"
+            name="role"
+            placeholder="e.g. Frontend Developer"
+            required
+          />
+
+        </div>
+
+
+        <div class="input-group">
+
+          <label for="photo">Profile Photo URL</label>
+
+          <input
+            type="url"
+            id="photo"
+            name="photo"
+            placeholder="https://example.com/photo.jpg"
+          />
+
+        </div>
+
+
+        <div class="input-group full-width">
+
+          <label for="bio">Short Bio</label>
+
+          <textarea
+            id="bio"
+            name="bio"
+            placeholder="Write something about this person..."
+            required
+          ></textarea>
+
+        </div>
+
+
+        <div class="form-footer">
+
+          <p>
+            <span>●</span>
+            All fields are required except photo.
+          </p>
+
+          <button type="submit" class="submit-btn">
+            <span>+</span>
+            Add User
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+
+    <!-- USERS SECTION -->
+    <section class="users-section">
+
+      <div class="section-heading users-heading">
+
+        <div>
+          <p class="eyebrow">OUR TEAM</p>
+          <h3>Team Members</h3>
+        </div>
+
+        <div class="member-count">
+          <span id="memberCount">3</span> Members
+        </div>
+
+      </div>
+
+
+      <div class="users-container" id="usersContainer">
+
+
+        <!-- USER 1 -->
+        <article class="user-card">
+
+          <div class="card-top">
+
+            <div class="user-image">
+              <img
+                src="https://i.pravatar.cc/150?img=12"
+                alt="John Doe"
+              >
+            </div>
+
+            <button class="menu-btn">•••</button>
+
+          </div>
+
+          <div class="user-info">
+
+            <h4>John Doe</h4>
+
+            <span class="user-role">
+              Frontend Developer
+            </span>
+
+            <p>
+              Loves building beautiful UIs and
+              learning new technologies.
+            </p>
+
+          </div>
+
+          <div class="card-footer">
+            <span class="active">
+              <i></i> Active
+            </span>
+
+            <span class="user-id">#001</span>
+          </div>
+
+        </article>
+
+
+        <!-- USER 2 -->
+        <article class="user-card">
+
+          <div class="card-top">
+
+            <div class="user-image">
+              <img
+                src="https://i.pravatar.cc/150?img=47"
+                alt="Jane Smith"
+              >
+            </div>
+
+            <button class="menu-btn">•••</button>
+
+          </div>
+
+          <div class="user-info">
+
+            <h4>Jane Smith</h4>
+
+            <span class="user-role">
+              Backend Engineer
+            </span>
+
+            <p>
+              Enjoys solving complex problems and
+              optimizing APIs.
+            </p>
+
+          </div>
+
+          <div class="card-footer">
+            <span class="active">
+              <i></i> Active
+            </span>
+
+            <span class="user-id">#002</span>
+          </div>
+
+        </article>
+
+
+        <!-- USER 3 -->
+        <article class="user-card">
+
+          <div class="card-top">
+
+            <div class="user-image">
+              <img
+                src="https://i.pravatar.cc/150?img=11"
+                alt="Alex Lee"
+              >
+            </div>
+
+            <button class="menu-btn">•••</button>
+
+          </div>
+
+          <div class="user-info">
+
+            <h4>Alex Lee</h4>
+
+            <span class="user-role">
+              UI/UX Designer
+            </span>
+
+            <p>
+              Passionate about user experience and
+              clean design.
+            </p>
+
+          </div>
+
+          <div class="card-footer">
+            <span class="active">
+              <i></i> Active
+            </span>
+
+            <span class="user-id">#003</span>
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>© 2026 Userly. Built with ❤️ for modern teams.</p>
+  </footer>
+
+
+  <script src="./JavaScript/main.js"></script>
+
+</body>
+</html>
