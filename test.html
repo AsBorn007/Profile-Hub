@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 100px;
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+      }
+
+      .todo-form {
+        width: 500px;
+        display: flex;
+        gap: 12px;
+      }
+
+      .task-input {
+        flex: 1;
+        height: 48px;
+        padding: 0 16px;
+        border: 1px solid #d9dde3;
+        border-radius: 8px;
+        outline: none;
+        background: #fff;
+        font-size: 16px;
+      }
+
+      .task-input:focus {
+        border-color: #222;
+      }
+
+      .task-input::placeholder {
+        color: #999;
+      }
+
+      .add-task-btn {
+        height: 48px;
+        padding: 0 22px;
+        border: none;
+        border-radius: 8px;
+        background: #222;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .add-task-btn:hover {
+        transform: translateY(-1px);
+        opacity: 0.9;
+      }
+
+      .todo-list {
+        width: 500px;
+        margin-top: 20px;
+      }
+
+      .todo-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 18px;
+        margin-bottom: 10px;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="todo-form">
+      <input type="text" class="task-input" placeholder="Enter task" />
+
+      <button type="submit" class="add-task-btn">Add Task</button>
+    </form>
+
+    <div class="todo-list"></div>
+
+    <script>
+      let form = document.querySelector("form");
+      let ul = document.createElement("ul");
+      
+
+      const TodoData = {
+        todoList: [],
+
+        addTask() {
+          this.submitform();
+        },
+
+        submitform() {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            let input = document.querySelector(".task-input");
+
+            this.todoList.push(input.value);
+            
+            this.renderUI();
+             this.todoList.forEach((todo)=>{
+                console.log(lis.textContent =  todo.value)
+            })
+          });
+        },
+
+        renderUI() {
+          let todolistDiv = document.querySelector(".todo-list");
+            let lis = document.createElement("li");
+          ul.append(lis);
+          todolistDiv.append(ul);
+           
+        },
+      };
+
+      TodoData.addTask();
+    </script>
+  </body>
+</html>
